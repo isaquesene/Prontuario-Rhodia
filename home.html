@@ -11,7 +11,7 @@
     <div class="container">
         <img class="image" src="image/samaritano.png" alt="">
         <div class="title">Prontuario Simples</div>
-        <form action="#">
+        <form action="#"  name="submit-to-google-sheet">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Data Registro</span>
@@ -150,8 +150,8 @@
 
     <!--SCRIPT GOGOLE SHEETS-->
     <script>
-        const scriptURL = '<SCRIPT URL>'
-        const form = document.forms['submit-to-google-sheet']
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwCUEl8625FYeiYl8FGPFHu_c_m_Q1dZJ_y3Y4kg4wwidVCtMbFrKAIITbIOap1IzZvVQ/exec'
+        const form = document.forms['contact-us']
       
         form.addEventListener('submit', e => {
           e.preventDefault()
