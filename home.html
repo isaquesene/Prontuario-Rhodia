@@ -57,26 +57,26 @@
                 <!--DADOS CLINICOS-->
                 <div class="input-box">
                     <span class="details">1-Qual a sua maior necessidade de saúde hoje?</span>
-                    <input class="input" type="text" placeholder="Anote..." >
+                    <input class="input" name="saude" type="text" placeholder="Anote..." >
                 </div>
                 <div class="input-box">
                     <span class="details">2-Quando foi a última consulta?</span>
-                    <input class="input" type="text" placeholder="Anote..." >
+                    <input class="input" name="consulta" type="text" placeholder="Anote..." >
                 </div>
                 <div class="input-box">
                     <span class="details">3-Está gravida?</span>
                     <label class="radio">
-                            <input type="radio"  onclick="javascript:algomais();" id="noCheck" value="0" checked>
+                            <input type="radio" name="gravida" onclick="javascript:algomais();" id="noCheck" value="0" checked>
                             NÃO
                         </label>
                         <label class="radio">
-                            <input type="radio"  onclick="javascript:algomais();" id="yesCheck" value="1">
+                            <input type="radio" name="gravida" onclick="javascript:algomais();" id="yesCheck" value="1">
                             SIM
                         </label>
                         <div id="ifYes">
                             <label for="">Há quanto tempo? Está amamentando?</label>
                             <br>
-                            <textarea  placeholder="Anote..." maxlength="955"></textarea>
+                            <textarea  placeholder="Anote..." name="gravida" maxlength="955"></textarea>
                         </div>
                 </div>
                 <div class="input-box">
