@@ -145,6 +145,8 @@
             <div class="button">
                 <input type="submit" name="submit" value="Salvar">
             </div>
+
+            <span id="success"></span>
         </form>
     </div>
 
@@ -152,11 +154,19 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx4o3rVzLLRmxzPD-_eRMv02imUzUXWuMv4o8qRpt_TCdeituB2ToKzPL3bUeHfBC9lAg/exec'
         const form = document.forms['submit-to-google-sheet']
+        const success = document.getElementById('success');
       
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
+            .then(response => {
+                success.innerHTML="cadastrado com sucesso!";
+
+                setTimeout(function(){
+                    success.innerHTML="";
+                }, 5000)
+                form.reset();
+            })
             .catch(error => console.error('Error!', error.message))
         })
     </script>
