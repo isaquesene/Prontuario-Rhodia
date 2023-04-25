@@ -79,23 +79,23 @@
                             <textarea  placeholder="Anote..." name="semanas" maxlength="955"></textarea>
                         </div>
                 </div>
-                <!--<div class="input-box">
+                <div class="input-box">
                     <span class="details">4-Toma algum tipo de medicamento? Quais?</span>
                         <label class="radio">
-                            <input type="radio"  onclick="javascript:remedio();" id="noCheckMedica" value="0" checked>
+                            <input type="radio" name="toma_medicamento" onclick="javascript:remedio();" id="noCheckMedica" value="NÃO" checked>
                             NÃO
                         </label>
                         <label class="radio">
-                            <input type="radio"  onclick="javascript:remedio();" id="yesCheckMedica" value="1">
+                            <input type="radio" name="toma_medicamento" onclick="javascript:remedio();" id="yesCheckMedica" value="SIM">
                             SIM
                         </label>
                         <div id="ifYesMedica">
                             <label for="">Descreva o medicamento:</label>
                             <br>
-                            <textarea  placeholder="Anote..." maxlength="955"></textarea>
+                            <textarea  name="descricao_remedio" placeholder="Anote..." maxlength="955"></textarea>
                         </div>
                 </div>
-                <div class="input-box">
+                <!--<div class="input-box">
                     <span class="details">5-Sente dor ou desconforto no corpo?</span>
                     <label class="radio">
                             <input type="radio"  onclick="javascript:dores_corpo();" id="noCheckDores" value="0" checked>
