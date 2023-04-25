@@ -125,7 +125,7 @@ form .button input:hover{
     background: linear-gradient(-135deg, #fabc41, #bad111);
 }
 
-#succes{
+#success{
     padding: 20px 40px;
     background: #d3e06e;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
