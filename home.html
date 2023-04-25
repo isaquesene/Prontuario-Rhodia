@@ -176,12 +176,12 @@
     <!--LOCALIZAÇÃO-->
     <script type="text/javascript">
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(success, error);
+            navigator.geolocation.getCurrentPosition(successs, error);
         } else {
             console.log('Geolocalização não é suportada');
         }
         
-        function success(position) {
+        function successs(position) {
             const latitude  = position.coords.latitude;
             const longitude = position.coords.longitude;
         
