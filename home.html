@@ -167,9 +167,38 @@
         }
     </script>
 
+    <!--DATA REGISTRO-->
     <script type="text/javascript">
         var hoje = new Date().toISOString().substr(0, 10);
         document.getElementById("data_registro").value = hoje;
+    </script>
+
+    <!--LOCALIZAÇÃO-->
+    <script type="text/javascript">
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+            console.log('Geolocalização não é suportada');
+        }
+        
+        function success(position) {
+            const latitude  = position.coords.latitude;
+            const longitude = position.coords.longitude;
+        
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`)
+            .then(response => response.json())
+            .then(data => {
+                const address = data.display_name;
+        
+                const locationInput = document.querySelector('#endereco');
+                locationInput.value = address;
+            })
+            .catch(error => console.error(error));
+        }
+        
+        function error() {
+            console.log('Não foi possível obter a localização');
+        }
     </script>
 
     <!--MEDICAMENTO-->
