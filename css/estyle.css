@@ -128,6 +128,7 @@ form .button input{
 
 .button-login input{
     height: 100%;
+    width: 40%;
     outline: none;
     color: #fff;
     border: none;
