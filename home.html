@@ -177,10 +177,12 @@
         select.onchange = function() {
         if (select.value === "outra") {
             const input = document.createElement("input");
+            const span = document.createElement("span");
             input.type = "text";
             input.name = "outra_doenca";
             input.placeholder = "Anote...";
             input.className = "input";
+            span.name = "Outros:";
             inputBox.appendChild(input);
         } else {
             inputBox.innerHTML = "";
