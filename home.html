@@ -64,7 +64,12 @@
                     <input class="input" name="consulta" type="text" placeholder="Anote..." >
                 </div>
                 <div class="input-box">
-                    <span class="details">3-Está gravida?</span>
+                    <span class="details">3-Você acha que tem alguma doença? 
+                    </span>
+                    <input class="input" name="alguma_doenca" type="text" placeholder="Anote..." >
+                </div>
+                <div class="input-box">
+                    <span class="details">4-Está gravida?</span>
                     <label class="radio">
                             <input type="radio" name="gravida" onclick="javascript:algomais();" id="noCheck" value="NÃO" checked>
                             NÃO
@@ -80,7 +85,7 @@
                         </div>
                 </div>
                 <div class="input-box">
-                    <span class="details">4-Toma algum tipo de medicamento? Quais?</span>
+                    <span class="details">5-Você toma algum remédio? Pra quê?</span>
                         <label class="radio">
                             <input type="radio" name="toma_medicamento" onclick="javascript:remedio();" id="noCheckMedica" value="NÃO" checked>
                             NÃO
@@ -96,7 +101,7 @@
                         </div>
                 </div>
                 <div class="input-box">
-                    <span class="details">5-Sente dor ou desconforto no corpo?</span>
+                    <span class="details">6-Sente dor ou desconforto no corpo?</span>
                     <label class="radio">
                             <input type="radio" name="dor_desconforto" onclick="javascript:dores_corpo();" id="noCheckDores" value="NÃO" checked>
                             NÃO
@@ -112,7 +117,7 @@
                         </div>
                 </div>
                 <div class="input-box">
-                    <span class="details">6-Algum familiar seu tem alguma doença como: Diabete, problema no coração, no pulmão, na cabeça?</span>
+                    <span class="details">7-Algum familiar seu tem alguma doença como: Diabete, problema no coração, no pulmão, na cabeça?</span>
                     <label class="radio">
                             <input type="radio" name="problema_familiar" onclick="javascript:doenca();" id="noCheckDoenca" value="NÃO" checked>
                             NÃO
@@ -126,6 +131,19 @@
                             <br>
                             <textarea  name="qual_doenca" placeholder="Anote..." maxlength="955"></textarea>
                         </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">8-Você tem:</span>
+                    <select class="input" name="voce_tem" id="sexo">
+                        <option value="">Selecione...</option>
+                        <option value="Pressão Alta">Pressão Alta</option>
+                        <option value="Diabetes">Diabetes</option>
+                        <option value="Queimação no estômago">Queimação no estômago</option>
+                        <option value="Alguma ferida que não sara">Alguma ferida que não sara</option>
+                        <option value="AIDS/HIV">AIDS/HIV</option>
+                        <option value="Asma">Asma</option>
+                    </select>
+                    <textarea  name="outras_doencas" placeholder="Anote..." maxlength="955"></textarea>
                 </div>
             </div>
             <div class="button">
