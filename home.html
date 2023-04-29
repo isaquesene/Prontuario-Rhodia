@@ -133,7 +133,7 @@
                         </div>
                 </div>
                 <div class="input-box">
-                    <span class="details">8-Você tem:</span>
+                    <span class="details" id="mySelect">8-Você tem:</span>
                     <select class="input" name="voce_tem" id="sexo">
                         <option value="">Selecione...</option>
                         <option value="Pressão Alta">Pressão Alta</option>
@@ -142,9 +142,13 @@
                         <option value="Alguma ferida que não sara">Alguma ferida que não sara</option>
                         <option value="AIDS/HIV">AIDS/HIV</option>
                         <option value="Asma">Asma</option>
+                        <option value="outra">Outra</option>
                     </select>
-                    <textarea  name="outras_doencas" placeholder="Anote..." maxlength="955"></textarea>
                 </div>
+                <div class="input-box" id="inputBox">
+                    
+                </div>
+
             </div>
             <div class="button">
                 <input type="submit" name="submit" value="Salvar">
@@ -153,6 +157,24 @@
             <span id="success"></span>
         </form>
     </div>
+
+    <!--Outras doencas-->
+    <script>
+        const select = document.getElementById("mySelect");
+        const inputBox = document.getElementById("inputBox");
+
+        select.onchange = function() {
+        if (select.value === "option2") {
+            const input = document.createElement("input");
+            input.type = "text";
+            input.name = "newInput";
+            input.className = "input";
+            inputBox.appendChild(input);
+        } else {
+            inputBox.innerHTML = "";
+        }
+        };
+    </script>
 
     <!--SCRIPT GOGOLE SHEETS-->
     <script>
