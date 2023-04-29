@@ -146,6 +146,7 @@
                     </select>
                 </div><br>
                 <div class="input-box" id="inputBox">
+                    <span id="spanBox"></span>
                     
                 </div>
 
@@ -173,6 +174,7 @@
     <script>
         const select = document.getElementById("mySelect");
         const inputBox = document.getElementById("inputBox");
+        const spanBox = document.getElementById("spanBox");
 
         select.onchange = function() {
         if (select.value === "outra") {
